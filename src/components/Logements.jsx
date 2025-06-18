@@ -1,6 +1,6 @@
 import logements from '../data/logements.json';
 
-function TestLogements() {
+function Logements() {
   return (
     <div>
       <h1>Liste des logements</h1>
@@ -13,4 +13,4 @@ function TestLogements() {
   );
 }
 
-export default TestLogements;
+export default Logements;

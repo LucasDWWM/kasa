@@ -1,4 +1,4 @@
-import logements from '../data/logements.json';
+import logements from "@/data/logements.json";
 
 function Logements() {
   return (

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import '@/assets/styles/composant.scss';
 
 import AppRouter from './assets/router';

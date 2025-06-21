@@ -9,8 +9,8 @@ import { Route, Routes } from 'react-router-dom'
 function AppRouter() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/logements" element={<Layout><Logements /></Layout>} />
+      <Route path="/" element={<Layout><Home /></Layout>} />
+      <Route path="/logement/:id" element={<Layout><Logements /></Layout>} />
       <Route path="/APropos" element={<Layout><APropos /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
 

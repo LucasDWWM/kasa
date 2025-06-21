@@ -1,0 +1,55 @@
+.home {
+  padding: 20px;
+}
+
+.banner {
+  background-image: url("@/assets/Images/ImageFond.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  color: white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  background-color: #f6f6f6;
+  padding: 40px;
+  border-radius: 25px;
+}
+
+.card {
+  position: relative;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(to top, #ff5a5f, #ff7e7f);
+  color: white;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}

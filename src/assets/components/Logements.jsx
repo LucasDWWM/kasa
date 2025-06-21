@@ -1,14 +1,24 @@
 import logements from "@/data/logements.json";
+import "@/assets/styles/Home.scss";
 
 function Logements() {
   return (
-    <div>
-      <h1>Liste des logements</h1>
-      <ul>
+    <div className="home">
+
+      {/* Bannière */}
+      <section className="banner">
+        <h1>Chez vous, partout et ailleurs</h1>
+      </section>
+
+      {/* Grille de logements */}
+      <section className="cards-grid">
         {logements.map((logement) => (
-          <li key={logement.id}>{logement.title}</li>
+          <div key={logement.id} className="card">
+            <img src={logement.cover} alt={logement.title} />
+            <p>{logement.title}</p>
+          </div>
         ))}
-      </ul>
+      </section>
     </div>
   );
 }

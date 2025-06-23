@@ -11,7 +11,7 @@ function Logements() {
 
   // Si l'ID ne correspond à aucun logement
   if (!logement) {
-    return <div>Logement introuvable.</div>;
+    return <div className="blackColor">Logement introuvable.</div>;
   }
 
   return (

@@ -3,6 +3,8 @@
   color: white;
   padding: 40px 0;
   text-align: center;
+  width: 100vw;
+  position: relative;
 
   img {
     width: 122px;
@@ -11,5 +13,6 @@
 
   p {
     font-size: 16px;
+    margin: 0 auto;
   }
 }

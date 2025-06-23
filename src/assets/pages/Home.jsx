@@ -8,7 +8,7 @@ function Home() {
     <div className="home">
 
       {/* Bannière d'en-tête */}
-      <section className="banner">
+      <section className="banner mobileSize">
         <h1>Chez vous, partout et ailleurs</h1>
       </section>
 

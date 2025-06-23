@@ -1,0 +1,53 @@
+header {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  nav {
+    display: flex;
+    gap: 30px;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .LogoRouge {
+    height: 70px;
+    margin: 0;
+  }
+
+  // Version mobile
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+
+    .LogoRouge {
+      height: 55px;
+    }
+
+    nav {
+      flex-direction: row;
+      gap: 20px;
+
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}

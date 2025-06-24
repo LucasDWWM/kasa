@@ -1,16 +1,14 @@
 import Header from "@/assets/components/Header";
 import Footer from "@/assets/components/Footer";
-import '@/assets/styles/Layout.scss';
+import "@/assets/styles/Layout.scss";
 
 function Layout({ children }) {
   return (
-    <>
+    <div className="layout">
       <Header />
-      <div className="main-wrapper">
-        <main>{children}</main>
-      </div>
+      <main className="main-wrapper">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }
 

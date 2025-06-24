@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams , Navigate  } from "react-router-dom";
 import logements from "@/data/logements.json";
 import Gallery from "@/assets/components/Gallery";
 import Collapse from "@/assets/components/Collapse";
@@ -11,7 +11,7 @@ function Logements() {
 
   // Si l'ID ne correspond à aucun logement
   if (!logement) {
-    return <div className="blackColor">Logement introuvable.</div>;
+    return <Navigate to="/404" replace />;
   }
 
   return (

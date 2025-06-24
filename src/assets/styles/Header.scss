@@ -1,25 +1,27 @@
 header {
+  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   padding: 30px 20px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   .LogoRouge {
-    height: 40px;
+    height: 70px;
     margin: 0;
   }
 
   nav {
     display: flex;
-    gap: 15px;
+    gap: 30px;
 
     a {
       text-decoration: none;
       color: #000;
       font-weight: 500;
-      font-size: 12px;
+      font-size: 16px;
       text-transform: uppercase;
       transition: color 0.3s;
 
@@ -28,7 +30,10 @@ header {
       }
     }
   }
-      // Media queries pour mobile
+}
+
+  
+  // Media queries pour mobile
   @media (min-width: 375px) {
     .LogoRouge {
       height: 35px;
@@ -57,5 +62,4 @@ header {
         font-size: 16px;
       }
     }
-  }
 }

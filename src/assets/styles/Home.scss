@@ -11,16 +11,39 @@ body {
 }
 
 .banner {
+  position: relative;
   background-image: url("@/assets/Images/ImageFond.png");
   background-size: cover;
   background-position: center;
   border-radius: 25px;
-  color: white;
   height: 190px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); // overlay sombre
+    border-radius: 25px;
+    z-index: 1;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 3.2em;
+    font-weight: 700;
+    max-width: 80%;
+    line-height: 1.1;
+  }
 }
+
 
 .cards-grid {
   display: grid;
@@ -51,11 +74,15 @@ body {
 
   p {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 15px;
+    left: 15px;
     z-index: 2;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
+    color: white;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6); // ✅ Ombre visible
+    max-width: 90%;
+    line-height: 1.4;
   }
 }
 
@@ -77,6 +104,7 @@ body {
     &::after {
       content: "";
       position: absolute;
+      inset: 0;
       background-color: rgba(0, 0, 0, 0.4);
       border-radius: 25px;
       z-index: 1;

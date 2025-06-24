@@ -1,5 +1,4 @@
 header {
-  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   padding: 30px 20px;
@@ -7,15 +6,20 @@ header {
   justify-content: space-between;
   align-items: center;
 
+  .LogoRouge {
+    height: 40px;
+    margin: 0;
+  }
+
   nav {
     display: flex;
-    gap: 30px;
+    gap: 15px;
 
     a {
       text-decoration: none;
       color: #000;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 12px;
       text-transform: uppercase;
       transition: color 0.3s;
 
@@ -24,29 +28,33 @@ header {
       }
     }
   }
-
-  .LogoRouge {
-    height: 70px;
-    margin: 0;
-  }
-
-  // Version mobile
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
-
+      // Media queries pour mobile
+  @media (min-width: 375px) {
     .LogoRouge {
-      height: 55px;
+      height: 35px;
     }
 
     nav {
-      flex-direction: row;
-      gap: 20px;
+      gap: 30px;
+      margin-right: 25px;
 
       a {
-        font-size: 14px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .LogoRouge {
+      height: 50px;
+    }
+
+    nav {
+      gap: 30px;
+
+      a {
+        font-size: 16px;
       }
     }
   }

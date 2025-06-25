@@ -3,6 +3,7 @@ import logements from "@/data/logements.json";
 import Gallery from "@/assets/components/Gallery";
 import Collapse from "@/assets/components/Collapse";
 import Stars from "@/assets/components/Stars";
+import '@/assets/styles/Logements.scss';
 
 // Composant Logements : page de détail pour un logement
 function Logements() {

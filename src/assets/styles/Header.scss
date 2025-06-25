@@ -2,64 +2,93 @@ header {
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 30px 20px;
-
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   .LogoRouge {
-    height: 70px;
-    margin: 0;
+    height: 45px;
+
+    @media (min-width: 768px) {
+      height: 60px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 70px;
+    }
   }
 
   nav {
     display: flex;
-    gap: 30px;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+      gap: 30px;
+      margin-right: 65px;
+    }
 
     a {
       text-decoration: none;
       color: #000;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 14px;
       text-transform: uppercase;
       transition: color 0.3s;
 
       &.active {
         text-decoration: underline;
       }
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+@media (max-width: 375px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 10px;
+
+    .LogoRouge {
+      height: 40px;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+
+      a {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
     }
   }
 }
 
-  
-  // Media queries pour mobile
-  @media (min-width: 375px) {
+@media (max-width: 200px) {
+  header {
+    padding: 10px 5px;
+    gap: 8px;
+
     .LogoRouge {
-      height: 35px;
+      height: 32px;
     }
 
     nav {
-      gap: 30px;
-      margin-right: 25px;
+      gap: 8px;
 
       a {
-        font-size: 16px;
+        font-size: 12px;
       }
     }
   }
+}
 
-  @media (min-width: 768px) {
 
-    .LogoRouge {
-      height: 50px;
-    }
-
-    nav {
-      gap: 30px;
-
-      a {
-        font-size: 16px;
-      }
-    }
 }

@@ -3,11 +3,10 @@ body {
   padding: 0;
 }
 
-
 .home {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
 
 .banner {
@@ -15,21 +14,21 @@ body {
   background-image: url("@/assets/Images/ImageFond.png");
   background-size: cover;
   background-position: center;
-  border-radius: 25px;
-  height: 190px;
+  border-radius: 20px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 0 20px;
   overflow: hidden;
+  width: 100%;
 
   &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.4); // overlay sombre
-    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
     z-index: 1;
   }
 
@@ -37,26 +36,56 @@ body {
     position: relative;
     z-index: 2;
     color: white;
-    font-size: 3.2em;
+    font-size: 1.7rem;
     font-weight: 700;
-    max-width: 80%;
-    line-height: 1.1;
+    max-width: 90%;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    height: 200px;
+    width: 92%;
+
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    height: 220px;
+    width: 96%;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 3rem;
+    }
   }
 }
 
-
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px;
+  grid-template-columns: 1fr;
+  gap: 25px;
   background-color: #f6f6f6;
-  padding: 50px;
-  border-radius: 25px;
+  padding: 20px;
+  border-radius: 20px;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 40px;
+    gap: 40px;
+  }
 }
 
 .card {
   position: relative;
-  height: 340px;
+  height: 300px;
   border-radius: 15px;
   overflow: hidden;
   background: linear-gradient(to top, #ff5a5f, #ff7e7f);
@@ -80,79 +109,20 @@ body {
     font-weight: bold;
     font-size: 15px;
     color: white;
-    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6); // ✅ Ombre visible
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
     max-width: 90%;
     line-height: 1.4;
   }
 }
 
-@media (max-width: 375px) {
-  .banner {
-    position: relative;
-    background-image: url("@/assets/Images/ImageFond.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    height: 160px;
-    width: 355px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 20px;
-    overflow: hidden;
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 25px;
-      z-index: 1;
-    }
-
-    h1 {
-      position: relative;
-      z-index: 2;
-      color: white;
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 1.2;
-      max-width: 240px;
-      text-align: left;
-    }
+    @media (min-width: 1024px) {
+    .cards-grid {
+    margin-right: 0;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
   }
 }
 
-@media (max-width: 768px) {
-  .banner {
-    position: relative;
-    background-image: url("@/assets/Images/ImageFond.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    height: 160px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    overflow: hidden;
 
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 25px;
-      z-index: 1;
-    }
-
-    h1 {
-      position: relative;
-      z-index: 2;
-      color: white;
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 1.2;
-      text-align: left;
-    }
-  }
-}
 

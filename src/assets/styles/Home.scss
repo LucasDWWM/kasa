@@ -43,6 +43,16 @@ body {
     line-height: 1.2;
   }
 
+  @media (min-width: 375px) {
+    height: 150px;
+    width: 85%;
+
+    h1 {
+      font-size: 2.1rem;
+      text-align: left;
+    }
+  }
+
   @media (min-width: 768px) {
     height: 200px;
     width: 92%;
@@ -54,7 +64,7 @@ body {
 
   @media (min-width: 1024px) {
     height: 220px;
-    width: 96%;
+    width: 90%;
     max-width: 1240px;
     margin: 0 auto;
 
@@ -67,13 +77,19 @@ body {
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr;
+  width: 100%;
   gap: 25px;
   background-color: #f6f6f6;
   padding: 20px;
   border-radius: 20px;
 
+  @media (min-width: 375px) {
+    width: 90%;;
+  }
+
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
+    width: 95%;
   }
 
   @media (min-width: 1024px) {
@@ -118,7 +134,7 @@ body {
     @media (min-width: 1024px) {
     .cards-grid {
     margin-right: 0;
-    width: 100%;
+    width: 95%;
     max-width: 1240px;
     margin: 0 auto;
   }

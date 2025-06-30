@@ -15,7 +15,9 @@ function Home() {
       {/* Grille de cartes de logements */}
       <section className="cards-grid">
         {logements.map((logement) => (
+          // Chaque carte est un lien vers la page du logement avec son ID
           <Link to={`/logement/${logement.id}`} key={logement.id} className="card">
+            {/* Image de couverture du logement et son titre */}
             <img src={logement.cover} alt={logement.title} />
             <p>{logement.title}</p>
           </Link>

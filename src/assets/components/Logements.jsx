@@ -10,7 +10,7 @@ function Logements() {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
   const logement = logements.find((item) => item.id === id); // Cherche le logement correspondant
 
-  // Si l'ID ne correspond à aucun logement
+  // Si l'ID ne correspond à aucun logement on renvoie vers la page 404
   if (!logement) {
     return <Navigate to="/404" replace />;
   }

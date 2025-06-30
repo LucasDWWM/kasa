@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '@/assets/styles/Collapse.scss';
 import arrowIcon2 from "@/assets/Images/arrow_back_ios-24px 2.png";
 
-// Composant Collapse : affiche un contenu déroulant (accordion)
+// Composant Collapse : affiche un contenu déroulant (accordeon)
 function Collapse({ title, children }) {
   const [open, setOpen] = useState(false); // État ouvert ou fermé
 

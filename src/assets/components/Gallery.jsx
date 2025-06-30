@@ -29,11 +29,16 @@ function Gallery({ images = [] }) {
         alt={`Slide ${currentIndex + 1}`}
         className="slide"
       />
-
+      {/* Flèches de navigation + compteur s'il y a plus d'une image */}
       {images.length > 1 && (
         <>
+          {/* Flèche gauche pour revenir en arrière */}
           <img src={leftArrow} alt="Flèche gauche" className="arrow left" onClick={prevImage}/>
+
+          {/* Flèche droite pour avancer */}
           <img src={rightArrow} alt="Flèche droite" className="arrow right" onClick={nextImage}/>
+
+          {/* numéro de l’image affichée / nombre total d’images */}
           <div className="counter">{currentIndex + 1} / {images.length}</div>
         </>
       )}

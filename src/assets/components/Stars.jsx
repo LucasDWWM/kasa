@@ -4,7 +4,7 @@ import "@/assets/styles/Stars.scss";
 // Composant Stars : affiche une note en étoiles
 function Stars({ rating }) {
 
-// Nombre total d'étoiles à afficher (toujours 5)
+// Nombre total d'étoiles à afficher (toujours 5) (int)
   const totalStars = 5;
   
 // Tableau qui contiendra les étoiles à afficher

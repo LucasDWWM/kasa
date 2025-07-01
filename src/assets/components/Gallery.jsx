@@ -8,7 +8,7 @@ function Gallery({ images = [] }) {
 
   if (!images || images.length === 0) return null;
 
-  // Affiche l'image précendente
+  // Affiche l'image précédente
   const prevImage = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
